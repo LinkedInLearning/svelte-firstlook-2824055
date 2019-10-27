@@ -2,7 +2,21 @@
   export let searchTerm;
 </script>
 
-<h4 class="text-primary">
-  Search:
-  <small>for: {searchTerm}</small>
-</h4>
+<div class="row justify-content-center mt-2">
+  <div class="col-12 col-md-8 col-lg-6 border rounded bg-light p-3">
+    <h4 class="mb-1">
+      Search:
+      <small>
+        {#if searchTerm}for{/if}
+        {searchTerm}
+      </small>
+    </h4>
+    <div class="input-group">
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Search Input"
+        bind:value={searchTerm} />
+    </div>
+  </div>
+</div>
