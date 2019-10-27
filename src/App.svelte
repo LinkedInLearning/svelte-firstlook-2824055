@@ -1,23 +1,15 @@
 <script>
-  export let name;
+  import ArtistList from "./ArtistList.svelte";
+  import ArtistSearch from "./ArtistSearch.svelte";
+  let searchTerm = "Barot Bellingham";
 </script>
 
-<style lang="scss">
+<style global lang="scss">
   $primary: purple;
-
   @import "../node_modules/bootstrap/scss/bootstrap.scss";
-
-  h1 {
-    color: $primary;
-  }
 </style>
 
 <div class="container">
-  <h1>Hello {name}!</h1>
-  <p class="text-primary">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt eos
-    quam reprehenderit porro, dolor nulla veritatis iure, voluptas repellendus
-    consequuntur fugit illum similique? Ab obcaecati doloribus distinctio iure?
-    Dolor.
-  </p>
+  <ArtistSearch {searchTerm} />
+  <ArtistList />
 </div>
